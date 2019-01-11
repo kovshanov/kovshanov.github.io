@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Ñêîëüêî îñòàëîñü äî ëåòà? (òî÷íûé ñ÷åò÷èê äíåé, ÷àñîâ ìèíóò, ñåêóíä)" />
-<title>Ñêîëüêî îñòàëîñü äî ëåòà? (òî÷íûé ñ÷åò÷èê äíåé, ÷àñîâ ìèíóò, ñåêóíä)</title>
+<meta name="description" content="Сколько осталось до лета? (точный счетчик дней, часов минут, секунд)" />
+<title>Сколько осталось до лета? (точный счетчик дней, часов минут, секунд)</title>
 <script>
 
 function fr( str, minlen )
@@ -122,7 +122,7 @@ function OnInterval()
 {
   now = new Date();
 
-  var sNow = "ñåé÷àñ: "+GetDateStr( now );
+  var sNow = "сейчас: "+GetDateStr( now );
   var year = now.getFullYear();
   if( now.getMonth() < 7 ) --year;
 
@@ -131,25 +131,25 @@ function OnInterval()
   //autumn
   begin = new Date( year, 8, 1 );
   end = new Date( year, 11, 1 );
-  Period( begin, end, "td_progress1", "îñåíü åùå íå íà÷àëàñü.", " îñåíè çàâåðøåíî!", "îñåíü óæå ïîçàäè." );
+  Period( begin, end, "td_progress1", "осень еще не началась.", " осени завершено!", "осень уже позади." );
 
   //winter
   begin = new Date( year, 11, 1 );
   end = new Date( year+1, 2, 1 );
-  Period( begin, end, "td_progress2", "çèìà åùå íå íà÷àëàñü.<br>çèìû íå áóäåò! ;)", " çèìû çàâåðøåíî!", "çèìà óæå ïîçàäè." );
+  Period( begin, end, "td_progress2", "зима еще не началась.<br>зимы не будет! ;)", " зимы завершено!", "зима уже позади." );
 
   //spring
   begin = new Date( year+1, 2, 1 );
   end = new Date( year+1, 5, 1 );
-  Period( begin, end, "td_progress3", "âåñíà åùå íå íà÷àëàñü.", " âåñíû çàâåðøåíî!", "âåñíà óæå ïîçàäè. óðà! óæå ëåòî!" );
+  Period( begin, end, "td_progress3", "весна еще не началась.", " весны завершено!", "весна уже позади. ура! уже лето!" );
 
   //main
   begin = new Date( year, 8, 1 )
   end = new Date( year+1, 5, 1 );
-  Period( begin, end, "td_progress", "ëåòî åùå íå çàêîí÷èëîñü!!! :-))) íå òåðÿé âðåìåíè!!!", " íåëåòíåãî ïåðèîäà çàâåðøåíî!", "ëåòî óæå íà÷àëîñü!!! :-))) íå òåðÿé âðåìåíè!!!" );
+  Period( begin, end, "td_progress", "лето еще не закончилось!!! :-))) не теряй времени!!!", " нелетнего периода завершено!", "лето уже началось!!! :-))) не теряй времени!!!" );
 
   //now
-  SetTime( now, "td_now", "ñåé÷àñ: %s" );
+  SetTime( now, "td_now", "сейчас: %s" );
 
   //begin
   SetTime( begin, "td_begin" );
@@ -218,7 +218,7 @@ body, table {font-family: arial;}
 </head>
 <body onload="Init();">
 
-<p class=MsoNormal style='text-align:center'><b><span style='font-size:20.0pt;font-family:Arial;color:red'>Æäåì ëåòî!</span></b></p>
+<p class=MsoNormal style='text-align:center'><b><span style='font-size:20.0pt;font-family:Arial;color:red'>Ждем лето!</span></b></p>
 
 
 
@@ -227,33 +227,33 @@ body, table {font-family: arial;}
       <td style="text-align:center">
         <table>
           <col><col><col style="width:90%">
-          <tr><td colspan=3>Äî ëåòà îñòàëîñü...</td></tr>
+          <tr><td colspan=3>До лета осталось...</td></tr>
           <tr>
-            <td>íåäåëü:</td><td id=td_rem_week_label style="text-align:right">?</td>
+            <td>недель:</td><td id=td_rem_week_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_week" );</script>
             </td>
           </tr>
           <tr>
-            <td>äíåé:</td><td id=td_rem_day_label style="text-align:right">?</td>
+            <td>дней:</td><td id=td_rem_day_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_day" );</script>
             </td>
           </tr>
           <tr>
-            <td>÷àñîâ:</td><td id=td_rem_hour_label style="text-align:right">?</td>
+            <td>часов:</td><td id=td_rem_hour_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_hour" );</script>
             </td>
           </tr>
           <tr>
-            <td>ìèíóò:</td><td id=td_rem_min_label style="text-align:right">?</td>
+            <td>минут:</td><td id=td_rem_min_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_min" );</script>
             </td>
           </tr>
           <tr>
-            <td>ñåêóíä:</td><td id=td_rem_sec_label style="text-align:right">?</td>
+            <td>секунд:</td><td id=td_rem_sec_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_sec" );</script>
             </td>
