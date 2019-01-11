@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Сколько осталось до лета? (точный счетчик дней, часов минут, секунд)" />
-<title>Сколько осталось до лета? (точный счетчик дней, часов минут, секунд)</title>
+<meta name="description" content="Г‘ГЄГ®Г«ГјГЄГ® Г®Г±ГІГ Г«Г®Г±Гј Г¤Г® Г«ГҐГІГ ? (ГІГ®Г·Г­Г»Г© Г±Г·ГҐГІГ·ГЁГЄ Г¤Г­ГҐГ©, Г·Г Г±Г®Гў Г¬ГЁГ­ГіГІ, Г±ГҐГЄГіГ­Г¤)" />
+<title>Г‘ГЄГ®Г«ГјГЄГ® Г®Г±ГІГ Г«Г®Г±Гј Г¤Г® Г«ГҐГІГ ? (ГІГ®Г·Г­Г»Г© Г±Г·ГҐГІГ·ГЁГЄ Г¤Г­ГҐГ©, Г·Г Г±Г®Гў Г¬ГЁГ­ГіГІ, Г±ГҐГЄГіГ­Г¤)</title>
 <script>
 
 function fr( str, minlen )
@@ -122,7 +122,7 @@ function OnInterval()
 {
   now = new Date();
 
-  var sNow = "сейчас: "+GetDateStr( now );
+  var sNow = "Г±ГҐГ©Г·Г Г±: "+GetDateStr( now );
   var year = now.getFullYear();
   if( now.getMonth() < 7 ) --year;
 
@@ -131,25 +131,25 @@ function OnInterval()
   //autumn
   begin = new Date( year, 8, 1 );
   end = new Date( year, 11, 1 );
-  Period( begin, end, "td_progress1", "осень еще не началась.", " осени завершено!", "осень уже позади." );
+  Period( begin, end, "td_progress1", "Г®Г±ГҐГ­Гј ГҐГ№ГҐ Г­ГҐ Г­Г Г·Г Г«Г Г±Гј.", " Г®Г±ГҐГ­ГЁ Г§Г ГўГҐГ°ГёГҐГ­Г®!", "Г®Г±ГҐГ­Гј ГіГ¦ГҐ ГЇГ®Г§Г Г¤ГЁ." );
 
   //winter
   begin = new Date( year, 11, 1 );
   end = new Date( year+1, 2, 1 );
-  Period( begin, end, "td_progress2", "зима еще не началась.<br>зимы не будет! ;)", " зимы завершено!", "зима уже позади." );
+  Period( begin, end, "td_progress2", "Г§ГЁГ¬Г  ГҐГ№ГҐ Г­ГҐ Г­Г Г·Г Г«Г Г±Гј.<br>Г§ГЁГ¬Г» Г­ГҐ ГЎГіГ¤ГҐГІ! ;)", " Г§ГЁГ¬Г» Г§Г ГўГҐГ°ГёГҐГ­Г®!", "Г§ГЁГ¬Г  ГіГ¦ГҐ ГЇГ®Г§Г Г¤ГЁ." );
 
   //spring
   begin = new Date( year+1, 2, 1 );
   end = new Date( year+1, 5, 1 );
-  Period( begin, end, "td_progress3", "весна еще не началась.", " весны завершено!", "весна уже позади. ура! уже лето!" );
+  Period( begin, end, "td_progress3", "ГўГҐГ±Г­Г  ГҐГ№ГҐ Г­ГҐ Г­Г Г·Г Г«Г Г±Гј.", " ГўГҐГ±Г­Г» Г§Г ГўГҐГ°ГёГҐГ­Г®!", "ГўГҐГ±Г­Г  ГіГ¦ГҐ ГЇГ®Г§Г Г¤ГЁ. ГіГ°Г ! ГіГ¦ГҐ Г«ГҐГІГ®!" );
 
   //main
   begin = new Date( year, 8, 1 )
   end = new Date( year+1, 5, 1 );
-  Period( begin, end, "td_progress", "лето еще не закончилось!!! :-))) не теряй времени!!!", " нелетнего периода завершено!", "лето уже началось!!! :-))) не теряй времени!!!" );
+  Period( begin, end, "td_progress", "Г«ГҐГІГ® ГҐГ№ГҐ Г­ГҐ Г§Г ГЄГ®Г­Г·ГЁГ«Г®Г±Гј!!! :-))) Г­ГҐ ГІГҐГ°ГїГ© ГўГ°ГҐГ¬ГҐГ­ГЁ!!!", " Г­ГҐГ«ГҐГІГ­ГҐГЈГ® ГЇГҐГ°ГЁГ®Г¤Г  Г§Г ГўГҐГ°ГёГҐГ­Г®!", "Г«ГҐГІГ® ГіГ¦ГҐ Г­Г Г·Г Г«Г®Г±Гј!!! :-))) Г­ГҐ ГІГҐГ°ГїГ© ГўГ°ГҐГ¬ГҐГ­ГЁ!!!" );
 
   //now
-  SetTime( now, "td_now", "сейчас: %s" );
+  SetTime( now, "td_now", "Г±ГҐГ©Г·Г Г±: %s" );
 
   //begin
   SetTime( begin, "td_begin" );
@@ -218,7 +218,7 @@ body, table {font-family: arial;}
 </head>
 <body onload="Init();">
 
-<p class=MsoNormal style='text-align:center'><b><span style='font-size:20.0pt;font-family:Arial;color:red'>Ждем лето!</span></b></p>
+<p class=MsoNormal style='text-align:center'><b><span style='font-size:20.0pt;font-family:Arial;color:red'>Г†Г¤ГҐГ¬ Г«ГҐГІГ®!</span></b></p>
 
 
 
@@ -227,33 +227,33 @@ body, table {font-family: arial;}
       <td style="text-align:center">
         <table>
           <col><col><col style="width:90%">
-          <tr><td colspan=3>До лета осталось...</td></tr>
+          <tr><td colspan=3>Г„Г® Г«ГҐГІГ  Г®Г±ГІГ Г«Г®Г±Гј...</td></tr>
           <tr>
-            <td>недель:</td><td id=td_rem_week_label style="text-align:right">?</td>
+            <td>Г­ГҐГ¤ГҐГ«Гј:</td><td id=td_rem_week_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_week" );</script>
             </td>
           </tr>
           <tr>
-            <td>дней:</td><td id=td_rem_day_label style="text-align:right">?</td>
+            <td>Г¤Г­ГҐГ©:</td><td id=td_rem_day_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_day" );</script>
             </td>
           </tr>
           <tr>
-            <td>часов:</td><td id=td_rem_hour_label style="text-align:right">?</td>
+            <td>Г·Г Г±Г®Гў:</td><td id=td_rem_hour_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_hour" );</script>
             </td>
           </tr>
           <tr>
-            <td>минут:</td><td id=td_rem_min_label style="text-align:right">?</td>
+            <td>Г¬ГЁГ­ГіГІ:</td><td id=td_rem_min_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_min" );</script>
             </td>
           </tr>
           <tr>
-            <td>секунд:</td><td id=td_rem_sec_label style="text-align:right">?</td>
+            <td>Г±ГҐГЄГіГ­Г¤:</td><td id=td_rem_sec_label style="text-align:right">?</td>
             <td>
               <script>DrawProgress( "td_rem_sec" );</script>
             </td>
